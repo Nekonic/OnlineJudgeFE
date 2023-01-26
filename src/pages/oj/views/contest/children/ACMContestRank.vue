@@ -7,27 +7,27 @@
         <Icon type="android-settings" size="20"></Icon>
         <div slot="content" id="switches">
           <p>
-            <span>{{$t('m.Menu')}}</span>
+            <span>Menu</span>
             <i-switch v-model="showMenu"></i-switch>
-            <span>{{$t('m.Chart')}}</span>
+            <span>Chart</span>
             <i-switch v-model="showChart"></i-switch>
           </p>
           <p>
-            <span>{{$t('m.Auto_Refresh')}}(10s)</span>
+            <span>Auto Refresh(10s)</span>
             <i-switch :disabled="refreshDisabled" @on-change="handleAutoRefresh"></i-switch>
           </p>
           <template v-if="isContestAdmin">
             <p>
-              <span>{{$t('m.RealName')}}</span>
+              <span>RealName</span>
               <i-switch v-model="showRealName"></i-switch>
             </p>
             <p>
-              <span>{{$t('m.Force_Update')}}</span>
+              <span>Force Update</span>
               <i-switch :disabled="refreshDisabled" v-model="forceUpdate"></i-switch>
             </p>
           </template>
           <template>
-            <Button type="primary" size="small" @click="downloadRankCSV">{{$t('m.download_csv')}}</Button>
+            <Button type="primary" size="small" @click="downloadRankCSV">download csv</Button>
           </template>
         </div>
       </Poptip>
@@ -35,7 +35,7 @@
     <div v-show="showChart" class="echarts">
       <ECharts :options="options" ref="chart" auto-resize></ECharts>
     </div>
-    <Table ref="tableRank" :columns="columns" :data="dataRank" disabled-hover height="600"></Table>
+    <Table ref="tableRank" class="auto-resize" :columns="columns" :data="dataRank" disabled-hover></Table>
     <Pagination :total="total"
                 :page-size.sync="limit"
                 :current.sync="page"
@@ -67,17 +67,14 @@
         columns: [
           {
             align: 'center',
-            width: 50,
-            fixed: 'left',
+            width: 60,
             render: (h, params) => {
               return h('span', {}, params.index + (this.page - 1) * this.limit + 1)
             }
           },
           {
-            title: this.$i18n.t('m.User_User'),
+            title: 'User',
             align: 'center',
-            fixed: 'left',
-            width: 150,
             render: (h, params) => {
               return h('a', {
                 style: {
@@ -97,7 +94,7 @@
             }
           },
           {
-            title: 'AC / ' + this.$i18n.t('m.Total'),
+            title: 'AC / Total',
             align: 'center',
             width: 100,
             render: (h, params) => {
@@ -117,9 +114,8 @@
             }
           },
           {
-            title: this.$i18n.t('m.TotalTime'),
+            title: 'TotalTime',
             align: 'center',
-            width: 100,
             render: (h, params) => {
               return h('span', this.parseTotalTime(params.row.total_time))
             }
@@ -128,7 +124,7 @@
         dataRank: [],
         options: {
           title: {
-            text: this.$i18n.t('m.Top_10_Teams'),
+            text: 'Top 10 Teams',
             left: 'center'
           },
           dataZoom: [
@@ -143,7 +139,7 @@
           toolbox: {
             show: true,
             feature: {
-              saveAsImage: {show: true, title: this.$i18n.t('m.save_as_image')}
+              saveAsImage: {show: true, title: 'save as image'}
             },
             right: '5%'
           },
@@ -272,7 +268,6 @@
           this.columns.push({
             align: 'center',
             key: problem.id,
-            width: problems.length > 15 ? 80 : null,
             renderHeader: (h, params) => {
               return h('a', {
                 'class': {

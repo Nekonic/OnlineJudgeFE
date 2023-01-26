@@ -7,7 +7,7 @@
       </transition>
       <div class="footer">
         <p v-html="website.website_footer"></p>
-        <p>Powered by <a href="https://github.com/QingdaoU/OnlineJudge">OnlineJudge</a>
+        <p>Copyright &copy; 2018. <a href="https://blog.naver.com/ndb796">나동빈 Co. All right reserved.</a>
           <span v-if="version">&nbsp; Version: {{ version }}</span>
         </p>
       </div>
@@ -73,19 +73,10 @@
   }
 
 
-  @media screen and (max-width: 1200px) {
-  .content-app {
-    margin-top: 160px;
-    padding: 0 2%;
-  }
-}
-
-@media screen and (min-width: 1200px) {
   .content-app {
     margin-top: 80px;
     padding: 0 2%;
   }
-}
 
   .footer {
     margin-top: 20px;

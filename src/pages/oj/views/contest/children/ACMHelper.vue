@@ -1,14 +1,14 @@
 <template>
   <panel shadow>
-    <div slot="title">{{$t('m.ACM_Helper')}}</div>
+    <div slot="title">ACM Helper</div>
     <div slot="extra">
       <ul class="filter">
         <li>
-          {{$t('m.Auto_Refresh')}} (10s)
+          Auto Refresh(10s)
           <i-switch style="margin-left: 5px;" @on-change="handleAutoRefresh"></i-switch>
         </li>
         <li>
-          <Button type="info" @click="getACInfo">{{$t('m.Refresh')}}</Button>
+          <Button type="info" @click="getACInfo">Refresh</Button>
         </li>
       </ul>
     </div>
@@ -40,16 +40,16 @@
         loadingTable: false,
         columns: [
           {
-            title: this.$i18n.t('m.AC_Time'),
+            title: 'AC Time',
             key: 'ac_time'
           },
           {
-            title: this.$i18n.t('m.ProblemID'),
+            title: 'ProblemID',
             align: 'center',
             key: 'problem_display_id'
           },
           {
-            title: this.$i18n.t('m.First_Blood'),
+            title: 'First Blood',
             align: 'center',
             render: (h, {row}) => {
               if (row.ac_info.is_first_ac) {
@@ -57,14 +57,14 @@
                   props: {
                     color: 'red'
                   }
-                }, this.$i18n.t('m.First_Blood'))
+                }, 'First Blood')
               } else {
                 return h('span', '----')
               }
             }
           },
           {
-            title: this.$i18n.t('m.Username'),
+            title: 'Username',
             align: 'center',
             render: (h, {row}) => {
               return h('a', {
@@ -84,7 +84,7 @@
             }
           },
           {
-            title: this.$i18n.t('m.RealName'),
+            title: 'RealName',
             align: 'center',
             render: (h, {row}) => {
               return h('span', {
@@ -96,18 +96,18 @@
             }
           },
           {
-            title: this.$i18n.t('m.Status'),
+            title: 'Status',
             align: 'center',
             render: (h, {row}) => {
               return h('Tag', {
                 props: {
                   color: row.checked ? 'green' : 'yellow'
                 }
-              }, row.checked ? this.$i18n.t('m.Checked') : this.$i18n.t('m.Not_Checked'))
+              }, row.checked ? 'Checked' : 'Not Checked')
             }
           },
           {
-            title: this.$i18n.t('m.Option'),
+            title: 'Option',
             fixed: 'right',
             align: 'center',
             width: 100,
@@ -124,7 +124,7 @@
                     this.updateCheckedStatus(row)
                   }
                 }
-              }, this.$i18n.t('m.Check_It'))
+              }, 'Check It')
             }
           }
         ],

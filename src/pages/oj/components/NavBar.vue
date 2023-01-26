@@ -6,11 +6,11 @@
         <Icon type="home"></Icon>
         {{$t('m.Home')}}
       </Menu-item>
-      <Menu-item name="/problem">
+      <Menu-item name="/problems">
         <Icon type="ios-keypad"></Icon>
         {{$t('m.NavProblems')}}
       </Menu-item>
-      <Menu-item name="/contest">
+      <Menu-item name="/contests">
         <Icon type="trophy"></Icon>
         {{$t('m.Contests')}}
       </Menu-item>
@@ -73,7 +73,7 @@
       </template>
     </Menu>
     <Modal v-model="modalVisible" :width="400">
-      <div slot="header" class="modal-title">{{$t('m.Welcome_to')}} {{website.website_name_shortcut}}</div>
+      <div slot="header" class="modal-title">Welcome to {{website.website_name_shortcut}}</div>
       <component :is="modalStatus.mode" v-if="modalVisible"></component>
       <div slot="footer" style="display: none"></div>
     </Modal>
@@ -129,11 +129,11 @@
 
 <style lang="less" scoped>
   #header {
-    min-width: 300px;
+    min-width: 1100px;
     position: fixed;
     top: 0;
     left: 0;
-    height: auto;
+    height: 60px;
     width: 100%;
     z-index: 1000;
     background-color: #fff;

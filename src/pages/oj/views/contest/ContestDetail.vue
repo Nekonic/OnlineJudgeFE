@@ -95,31 +95,27 @@
         contestPassword: '',
         columns: [
           {
-            title: this.$i18n.t('m.StartAt'),
+            title: 'StartAt',
             render: (h, params) => {
               return h('span', time.utcToLocal(params.row.start_time))
             }
           },
           {
-            title: this.$i18n.t('m.EndAt'),
+            title: 'EndAt',
             render: (h, params) => {
               return h('span', time.utcToLocal(params.row.end_time))
             }
           },
           {
-            title: this.$i18n.t('m.ContestType'),
-            render: (h, params) => {
-              return h('span', this.$i18n.t('m.' + params.row.contest_type ? params.row.contest_type.replace(' ', '_') : ''))
-            }
+            title: 'ContestType',
+            key: 'contest_type'
           },
           {
-            title: this.$i18n.t('m.Rule'),
-            render: (h, params) => {
-              return h('span', this.$i18n.t('m.' + params.row.rule_type))
-            }
+            title: 'Rule',
+            key: 'rule_type'
           },
           {
-            title: this.$i18n.t('m.Creator'),
+            title: 'Creator',
             render: (h, data) => {
               return h('span', data.row.created_by.username)
             }
@@ -207,7 +203,6 @@
   .flex-container {
     #contest-main {
       flex: 1 1;
-      width: 0;
       #contest-desc {
         flex: auto;
       }

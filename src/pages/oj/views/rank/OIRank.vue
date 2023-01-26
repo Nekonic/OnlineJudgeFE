@@ -2,7 +2,7 @@
   <Row type="flex" justify="space-around">
     <Col :span="22">
     <Panel :padding="10">
-      <div slot="title">{{$t('m.OI_Ranklist')}}</div>
+      <div slot="title">OI Ranklist</div>
       <div class="echarts">
         <ECharts :options="options" ref="chart" auto-resize></ECharts>
       </div>
@@ -41,7 +41,7 @@
             }
           },
           {
-            title: this.$i18n.t('m.User_User'),
+            title: 'user',
             align: 'center',
             render: (h, params) => {
               return h('a', {
@@ -62,27 +62,27 @@
             }
           },
           {
-            title: this.$i18n.t('m.mood'),
+            title: 'mood',
             align: 'center',
             key: 'mood'
           },
           {
-            title: this.$i18n.t('m.Score'),
+            title: 'Score',
             align: 'center',
             key: 'total_score'
           },
           {
-            title: this.$i18n.t('m.AC'),
+            title: 'AC',
             align: 'center',
             key: 'accepted_number'
           },
           {
-            title: this.$i18n.t('m.Total'),
+            title: 'Total',
             align: 'center',
             key: 'submission_number'
           },
           {
-            title: this.$i18n.t('m.Rating'),
+            title: 'Rating',
             align: 'center',
             render: (h, params) => {
               return h('span', utils.getACRate(params.row.accepted_number, params.row.submission_number))
@@ -94,7 +94,7 @@
             trigger: 'axis'
           },
           legend: {
-            data: [this.$i18n.t('m.Score')]
+            data: ['Score']
           },
           grid: {
             x: '3%',
@@ -136,7 +136,7 @@
           ],
           series: [
             {
-              name: this.$i18n.t('m.Score'),
+              name: 'Score',
               type: 'bar',
               data: [0],
               barMaxWidth: '80',

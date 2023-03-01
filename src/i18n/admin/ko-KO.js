@@ -8,6 +8,9 @@ export const m = {
   Judge_Server: '채점 서버',
   Prune_Test_Case: '테스트 케이스 가지치기',
   Problem: '문제',
+  FromFile: 'From File',
+  ToFile: 'To File',
+  ShareSubmission: 'Share Submission',
   Problem_List: '문제 목록',
   Create_Problem: '문제 만들기',
   Export_Import_Problem: '문제 가져오기 및 내보내기',
@@ -77,12 +80,24 @@ export const m = {
   SPJ_language: 'SPJ 언어',
   Compile: '컴파일',
   TestCase: '테스트 케이스',
+  IOMode: 'IO Mode',
+  InputFileName: 'Input File Name',
+  OutputFileName: 'Output File Name',
   Type: '유형',
   Input: '입력',
   Output: '출력',
   Score: '점수',
   Hint: '힌트',
   Source: '소스코드',
+  Edit_Problem: '문제 수정',
+  Add_Problme: '문제 만들기',
+  High: 'High',
+  Mid: 'Mid',
+  Low: 'Low',
+  Tag: 'Tag',
+  New_Tag: 'New Tag',
+  // ProblemList.vue
+  Contest_Problem_List: 'Contest Problem List',
   // Contest.vue
   ContestTitle: '제목',
   ContestDescription: '설명',
@@ -100,5 +115,10 @@ export const m = {
   DashBoardJudge_Server: '채점 서버',
   HTTPS_Status: 'HTTPS 상태',
   Force_HTTPS: '강제 HTTPS',
-  CDN_HOST: 'CDN 호스트'
+  CDN_HOST: 'CDN 호스트',
+  // Login.vue
+  Welcome_to_Login: 'Welcome to Login',
+  GO: 'GO',
+  username: 'username',
+  password: 'password'
 }

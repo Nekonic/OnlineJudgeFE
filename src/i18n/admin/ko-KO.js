@@ -10,7 +10,7 @@ export const m = {
   Problem: '문제',
   FromFile: 'From File',
   ToFile: 'To File',
-  ShareSubmission: 'Share Submission',
+  ShareSubmission: '제출 공유',
   Problem_List: '문제 목록',
   Create_Problem: '문제 만들기',
   Export_Import_Problem: '문제 가져오기 및 내보내기',
@@ -91,13 +91,13 @@ export const m = {
   Source: '소스코드',
   Edit_Problem: '문제 수정',
   Add_Problme: '문제 만들기',
-  High: 'High',
-  Mid: 'Mid',
-  Low: 'Low',
+  High: '어려움',
+  Mid: '보통',
+  Low: '쉬움',
   Tag: 'Tag',
   New_Tag: 'New Tag',
   // ProblemList.vue
-  Contest_Problem_List: 'Contest Problem List',
+  Contest_Problem_List: '대회 문제 목록',
   // Contest.vue
   ContestTitle: '제목',
   ContestDescription: '설명',
@@ -117,7 +117,7 @@ export const m = {
   Force_HTTPS: '강제 HTTPS',
   CDN_HOST: 'CDN 호스트',
   // Login.vue
-  Welcome_to_Login: 'Welcome to Login',
+  Welcome_to_Login: '환영합니다',
   GO: 'GO',
   username: 'username',
   password: 'password'

@@ -3,8 +3,9 @@
 </template>
 
 <script>
-  import Simditor from 'simditor'
-  import 'simditor/styles/simditor.css'
+  import Simditor from 'tar-simditor'
+  import 'tar-simditor/styles/simditor.css'
+  import './simditor-file-upload'
 
   export default {
     name: 'Simditor',

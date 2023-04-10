@@ -1,10 +1,5 @@
 # noj Front End
 
->### [Demo]()
-## 개발자
-+ 김영빈
-## 시작하기
-먼저 nodejs **v8.12.0** 를 설치해야됨
 
 ### Linux
 ```bash
